@@ -1,0 +1,578 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Proposta Forge Brothers</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap">
+<style>
+/* Layout: pilha de slides 16:9 alternando escuro, creme e bronze, como o PDF original */
+:root{
+  --ink:#1c1c1c; --ink2:#262320; --cream:#f2eee8; --paper:#faf8f4;
+  --gold:#b9946a; --bronze:#7d5d3c; --muted:#6d655c; --mutedD:#a59d93;
+  --line:#ddd6cc; --lineD:#3a3632; --orange:#e0603a;
+  --f:'Montserrat',system-ui,-apple-system,'Segoe UI',sans-serif;
+  color-scheme:dark;
+}
+body{background:#e4ded5;color:var(--ink);font-family:var(--f);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:24px}
+.deck{max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:20px}
+.s{position:relative;aspect-ratio:16/9;max-width:100%;container-type:inline-size;overflow:hidden;padding:5.5cqw 6.2cqw 4.5cqw;display:flex;flex-direction:column}
+.d{background:var(--ink);color:#f4efe8}.c{background:var(--cream);color:var(--ink)}.g{background:var(--gold);color:var(--ink)}
+.eb{display:flex;align-items:center;gap:1cqw;font-size:.9cqw;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--bronze)}
+.d .eb{color:var(--gold)}.g .eb{color:var(--ink)}
+.eb::before{content:"";width:2.4cqw;height:1px;background:currentColor}
+h1,h2{font-weight:300;margin:0;text-wrap:balance;line-height:1.08}
+h2{font-size:3.4cqw;margin-top:1.2cqw}h2 b,h1 b{font-weight:700}
+.sub{font-size:1.15cqw;color:var(--muted);margin-top:1.4cqw}.d .sub{color:var(--mutedD)}
+.ft{position:absolute;left:6.2cqw;right:6.2cqw;bottom:2.6cqw;display:flex;justify-content:space-between;font-size:.8cqw;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.d .ft{color:var(--mutedD)}.g .ft{color:var(--ink)}
+p{margin:0}
+.body{font-size:1.32cqw;line-height:1.7}
+.grow{flex:1;min-height:0}
+.row{display:grid;gap:2.2cqw}
+.num{font-size:.85cqw;font-weight:700;letter-spacing:.12em;color:var(--bronze)}.d .num{color:var(--gold)}
+.tick{border-top:2px solid var(--bronze);padding-top:1.2cqw}.d .tick{border-color:var(--gold)}
+.tick b{display:block;font-size:1.25cqw;font-weight:600;margin-top:.5cqw}
+img{display:block;max-width:100%}
+/* capa */
+.logo{width:17cqw}
+.bars{position:absolute;right:6.2cqw;top:5.5cqw;display:flex;flex-direction:column;align-items:flex-end;gap:1.1cqw}
+.bars i{display:block;height:3px;background:var(--gold)}
+.meta{display:flex;gap:4.5cqw;border-top:1px solid var(--lineD);padding-top:2cqw;font-size:1.05cqw}
+.meta span{display:block;font-size:.85cqw;font-weight:700;letter-spacing:.2em;color:var(--gold);margin-bottom:.6cqw}
+/* tabelas de linhas */
+.list{display:grid;grid-template-columns:1fr 1fr;column-gap:4cqw}
+.list div{display:flex;gap:1.6cqw;align-items:baseline;border-bottom:1px solid rgba(28,28,28,.25);padding:1.2cqw 0;font-size:1.55cqw;font-weight:500}
+.list small{font-size:.85cqw;font-weight:700;letter-spacing:.1em;opacity:.6}
+.prof{border-top:1px solid var(--lineD)}
+.prof div{display:grid;grid-template-columns:1.6fr 1.2fr .8fr;align-items:center;border-bottom:1px solid var(--lineD);padding:1.3cqw 0;font-size:1.45cqw}
+.prof em{font-style:normal;font-size:1.05cqw;color:var(--mutedD)}
+.prof strong{text-align:right;color:var(--gold);font-size:2.3cqw;font-weight:600}
+.big{font-size:5.2cqw;font-weight:700;color:var(--gold);line-height:1}
+.stats{display:flex;gap:3cqw;border-top:1px solid var(--line);padding-top:1.6cqw}.d .stats{border-color:var(--lineD)}
+.stats b{display:block;font-size:2.3cqw;font-weight:600;color:var(--bronze)}.d .stats b{color:var(--gold)}
+.stats span{font-size:.85cqw;letter-spacing:.15em;text-transform:uppercase;color:var(--muted)}.d .stats span{color:var(--mutedD)}
+.cap{font-size:.85cqw;font-weight:600;letter-spacing:.18em;text-transform:uppercase;text-align:center;color:var(--muted)}.d .cap{color:var(--mutedD)}
+.case{display:grid;grid-template-columns:1fr 1fr;gap:4cqw;flex:1;min-height:0}
+.case>div{display:flex;flex-direction:column;min-height:0}
+.case .body{margin-top:2cqw;max-width:40cqw}
+.box{background:var(--gold);padding:2.2cqw 2cqw}
+.box span{font-size:.9cqw;font-weight:700;letter-spacing:.2em}
+.box b{display:block;font-size:4.2cqw;font-weight:300;margin:.6cqw 0}.box b strong{font-weight:700}
+/* jogo */
+.kpi{display:grid;grid-template-columns:repeat(4,1fr);gap:1.8cqw;margin-top:3cqw}
+.kpi div{border-top:2px solid var(--gold);padding-top:1.4cqw;font-size:1.35cqw;line-height:1.5}
+.kpi b{display:block;font-size:4.4cqw;font-weight:300;color:var(--gold);line-height:1.2}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:3cqw;border-top:1px solid var(--lineD);padding-top:2.4cqw;margin-top:3.4cqw;font-size:1.3cqw;line-height:1.65}
+.three span{display:block;font-size:.85cqw;font-weight:700;letter-spacing:.2em;color:var(--gold);margin-bottom:.6cqw}
+.mkt{display:grid;grid-template-columns:1fr 1fr;gap:2.4cqw 3cqw;margin-top:2.4cqw}
+.mkt div{border-top:2px solid var(--bronze);padding-top:1cqw;font-size:1.3cqw;line-height:1.55}
+.mkt b{display:block;font-size:4.4cqw;font-weight:300;line-height:1.25}
+.src{font-size:.85cqw;color:var(--muted);margin-top:auto;padding-bottom:2.4cqw}
+/* funil */
+.fun{display:grid;grid-template-columns:repeat(5,1fr);gap:1.4cqw;margin-top:3cqw}
+.fun div{background:var(--paper);border:1px solid var(--line);border-top:3px solid var(--bronze);padding:2cqw 1.6cqw;font-size:1.05cqw;color:var(--muted)}
+.fun div:last-child{background:var(--gold);border-color:var(--gold);border-top-color:var(--ink);color:var(--ink)}
+.fun b{display:block;font-size:1.65cqw;font-weight:500;color:var(--ink);margin:.8cqw 0 .5cqw}
+.bar{background:var(--ink);color:#f4efe8;display:flex;justify-content:space-between;align-items:center;padding:2.2cqw 2cqw;margin-top:auto;margin-bottom:2.6cqw}
+.bar span{display:block;font-size:.9cqw;font-weight:700;letter-spacing:.2em;color:var(--gold)}
+.bar p{font-size:1.15cqw;color:var(--mutedD)}
+.bar strong{font-size:3.6cqw;font-weight:700}
+/* angulos */
+.ang{display:grid;grid-template-columns:repeat(4,1fr);gap:1cqw;margin-top:2.6cqw}
+.ang div{background:var(--ink2);border-top:3px solid var(--gold);padding:1.6cqw 1.5cqw;font-size:1.1cqw;line-height:1.6}
+.ang i{font-style:normal;display:block;font-size:2.4cqw;font-weight:300;color:var(--gold)}
+.ang b{display:block;font-size:1.65cqw;font-weight:500;margin:.4cqw 0 1.4cqw}
+.ang span{display:block;font-size:.85cqw;font-weight:700;letter-spacing:.2em;color:var(--gold);margin-top:1.2cqw}
+.ang em{font-style:normal;color:var(--mutedD)}
+/* listas numeradas */
+.nl div{display:grid;grid-template-columns:5cqw 1fr;border-top:1px solid var(--line);padding:1.6cqw 0;font-size:1.3cqw;line-height:1.55}
+.nl i{font-style:normal;font-size:2.2cqw;font-weight:300;color:var(--bronze)}
+.d .nl div{border-color:var(--gold)}.d .nl i{color:var(--gold)}
+.ia{background:var(--gold);border-top:4px solid var(--ink);padding:3cqw 2.6cqw;font-size:1.3cqw;line-height:1.65}
+.ia h3{font-size:3.2cqw;font-weight:700;margin:.6cqw 0 1.4cqw}
+/* escopo */
+.cols5{display:grid;grid-template-columns:repeat(5,1fr);gap:1.1cqw;margin-top:3cqw}
+.cols5 div{background:var(--paper);border:1px solid var(--line);border-top:3px solid var(--bronze);padding:2cqw 1.5cqw 3cqw}
+.cols5 b{display:block;font-size:1.7cqw;font-weight:500;margin:.8cqw 0 2cqw}
+.cols5 ul,.plan ul{list-style:none;margin:0;padding:0;display:grid;gap:1.4cqw;font-size:1.15cqw;line-height:1.55}
+.cols5 li,.plan li{position:relative;padding-left:1.6cqw}
+.cols5 li::before,.plan li::before{content:"";position:absolute;left:0;top:.7em;width:.9cqw;height:2px;background:var(--bronze)}
+.out{margin-top:3cqw;border-top:1px solid var(--lineD)}
+.out div{display:grid;grid-template-columns:1fr 1.5fr;border-bottom:1px solid var(--lineD);padding:1.8cqw 0;font-size:1.45cqw}
+.out b{font-weight:600}.out span{font-size:1.25cqw;color:var(--mutedD)}
+/* cronograma */
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:1cqw;align-items:end;flex:1;margin-top:2cqw;margin-bottom:3.4cqw}
+.steps div{background:var(--ink2);border-top:3px solid var(--gold);padding:1.6cqw 1.2cqw;font-size:1cqw;line-height:1.5;color:var(--mutedD)}
+.steps div:nth-child(1){height:30%}.steps div:nth-child(2){height:47%}.steps div:nth-child(3){height:64%}.steps div:nth-child(4){height:81%}
+.steps div:nth-child(5){height:98%;background:var(--gold);border:0;color:var(--ink)}
+.steps i{font-style:normal;display:block;font-size:2.3cqw;font-weight:300;color:var(--gold)}.steps div:nth-child(5) i{color:var(--ink)}
+.steps b{display:block;font-size:1.2cqw;font-weight:600;color:#f4efe8;margin:.4cqw 0 .6cqw}.steps div:nth-child(5) b{color:var(--ink)}
+/* metas */
+.meta-bars{display:grid;gap:2.2cqw;margin-top:3.4cqw}
+.meta-bars div{display:grid;grid-template-columns:25cqw 1fr 12cqw;align-items:center;gap:1.4cqw}
+.meta-bars b{display:block;font-size:1.55cqw;font-weight:600}.meta-bars small{font-size:1.05cqw;color:var(--muted)}
+.track{height:2.7cqw;background:#e7e0d5}.track i{display:block;height:100%;background:var(--bronze)}
+.meta-bars strong{text-align:right;font-size:1.65cqw}
+/* planos */
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6cqw;margin-top:2.6cqw}
+.plan{background:var(--paper);border:1px solid var(--line);border-top:3px solid var(--bronze);padding:2cqw 2cqw;display:flex;flex-direction:column}
+.plan.rec{background:var(--gold);border-color:var(--gold);border-top-color:var(--ink)}
+.plan .num{color:var(--bronze)}.plan.rec .num{color:var(--ink)}
+.plan h3{font-size:2cqw;font-weight:500;margin:.8cqw 0 1.2cqw}
+.plan ul{font-size:1.3cqw;gap:1cqw}
+.plan footer{margin-top:auto;padding-top:1.8cqw;border-top:1px solid rgba(0,0,0,.12);margin-top:3cqw;display:flex;justify-content:space-between;align-items:baseline}
+.plan footer b{font-size:2.4cqw;font-weight:700}.plan footer span{font-size:.95cqw;color:var(--muted)}.plan.rec footer span{color:var(--ink)}
+.cond{display:grid;grid-template-columns:1.6fr 1fr;gap:4cqw;margin-top:3cqw;flex:1;margin-bottom:3.4cqw}
+.cond .out{margin-top:0}
+.cond .out div{grid-template-columns:13cqw 1fr;padding:1.6cqw 0}
+.cpw{background:var(--ink2);border-top:3px solid var(--gold);padding:2.4cqw 2cqw;display:flex;flex-direction:column}
+.cpw span{font-size:.85cqw;font-weight:700;letter-spacing:.2em;color:var(--gold)}
+.cpw b{font-size:4.4cqw;font-weight:300;margin:1cqw 0}
+.cpw p{font-size:1.1cqw;color:var(--mutedD);line-height:1.6}
+.cpw hr{border:0;border-top:1px solid var(--lineD);margin:auto 0 2cqw;width:100%}
+.ns{display:grid;grid-template-columns:1fr 1fr;gap:0 3cqw;margin-top:4cqw}
+.ns div{display:grid;grid-template-columns:5.4cqw 1fr;border-top:2px solid var(--gold);padding:1.8cqw 0 3.6cqw;font-size:1.3cqw;line-height:1.6}
+.ns i{font-style:normal;font-size:2.2cqw;font-weight:300;color:var(--gold)}
+.contact{display:flex;gap:3cqw;font-size:1.1cqw}.contact span{font-size:.85cqw;font-weight:700;letter-spacing:.2em;color:var(--gold);margin-right:.8cqw}
+.carousel{position:relative;background:var(--ink)}
+.ctrack{display:grid;grid-auto-flow:column;grid-auto-columns:100%;align-items:start;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
+.ctrack::-webkit-scrollbar{display:none}
+.slide{width:100%;scroll-snap-align:start;box-sizing:border-box;min-width:0}
+.cnav{position:absolute;left:0;right:0;bottom:1.8cqw;display:flex;justify-content:center;align-items:center;gap:1.6cqw;container-type:inline-size}
+.carousel{container-type:inline-size}
+.cnav button{width:3.4cqw;height:3.4cqw;min-width:32px;min-height:32px;border-radius:50%;border:1px solid var(--gold);background:var(--ink);color:var(--gold);font:inherit;font-size:1.4cqw;cursor:pointer}
+.cnav button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.dots{display:flex;gap:.8cqw}
+.dots button{width:auto;height:auto;min-width:0;min-height:0;border:0;border-radius:0;padding:.6cqw 0;background:none}
+.dots button i{display:block;width:3cqw;height:3px;background:var(--mutedD);opacity:.5}
+.dots button[aria-current="true"] i{background:var(--gold);opacity:1}
+@media (prefers-reduced-motion:reduce){.sway,.steam{animation:none}}
+/* tudo claro */
+.carousel{background:var(--cream)}
+.meta{border-color:var(--line)}.meta span{color:var(--bronze)}
+.bars i{background:var(--bronze)}
+.prof{border-color:var(--line)}.prof div{border-color:var(--line)}.prof em{color:var(--muted)}.prof strong,.big{color:var(--bronze)}
+.ang div{background:var(--paper);border:1px solid var(--line);border-top:3px solid var(--bronze)}.ang i,.ang span{color:var(--bronze)}.ang em{color:var(--muted)}
+.out{border-color:var(--line)}.out div{border-color:var(--line)}.out span{color:var(--muted)}
+.steps div{background:var(--paper);border:1px solid var(--line);border-top:3px solid var(--bronze);color:var(--muted)}.steps i{color:var(--bronze)}.steps b{color:var(--ink)}
+.cpw{background:var(--paper);border:1px solid var(--line);border-top:3px solid var(--bronze)}.cpw span{color:var(--bronze)}.cpw p{color:var(--muted)}.cpw hr{border-color:var(--line)}
+.ns div{border-color:var(--bronze)}.ns i{color:var(--bronze)}
+.contact span{color:var(--bronze)}
+.c .sub{color:var(--muted)}
+.c [style*="color:var(--gold)"]{color:var(--bronze)!important}
+.cnav>button{background:none;border:0;width:auto;height:auto;min-width:24px;min-height:24px;color:var(--muted);font-size:1.8cqw;line-height:1;opacity:.8}.cnav>button:hover{opacity:1}
+.flips{display:grid;grid-template-columns:repeat(3,1fr);gap:2cqw;margin-top:2cqw;margin-bottom:3.6cqw;flex:1;min-height:0}
+.flip{all:unset;cursor:pointer;perspective:1200px;display:block;min-height:0}
+.flip:focus-visible{outline:2px solid var(--bronze);outline-offset:3px}
+.fi{position:relative;display:block;height:100%;transition:transform .7s cubic-bezier(.2,.7,.2,1);transform-style:preserve-3d}
+.flip.on .fi{transform:rotateY(180deg)}
+.ff,.fb{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;display:flex;flex-direction:column}
+.ff{background:#1c1c1c center/cover no-repeat;justify-content:flex-end;box-shadow:0 10px 30px rgba(0,0,0,.18)}
+.fcta{display:flex;flex-direction:column;align-items:center;gap:.6cqw;padding:3cqw 1.4cqw 2cqw;background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.88) 35%);color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.6);font-size:1.1cqw;letter-spacing:.06em;text-align:center}
+.fcta b{font-size:2.2cqw;font-weight:700;letter-spacing:0}
+.flip:hover .ff{filter:brightness(1.06)}
+.fb{transform:rotateY(180deg);background:var(--paper);border:1px solid var(--line);border-top:3px solid var(--bronze);padding:2cqw;color:var(--ink);text-align:left}
+.fn{font-size:2cqw;font-weight:600;margin:.5cqw 0 .8cqw}
+.fl{font-size:1.1cqw;line-height:1.55;color:var(--muted)}
+.fb ul{list-style:none;padding:0;margin:1.2cqw 0 0;display:grid;gap:.7cqw;font-size:1.05cqw;line-height:1.45}
+.fb li{position:relative;padding-left:1.5cqw}.fb li::before{content:"";position:absolute;left:0;top:.65em;width:.9cqw;height:2px;background:var(--bronze)}
+.fr{margin-top:auto;padding-top:1.2cqw;border-top:1px solid var(--line);font-size:.85cqw;color:var(--muted)}
+.fr b{display:block;font-size:2.2cqw;font-weight:700;color:var(--bronze)}
+@media (prefers-reduced-motion:reduce){.fi{transition:none}}
+.tl{list-style:none;margin:auto 0 auto;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:1.6cqw;position:relative}
+.tl::before{content:"";position:absolute;left:0;right:0;top:5.35cqw;height:.7cqw;border-radius:1cqw;background:linear-gradient(90deg,#f28b82,#f6b26b 30%,#f9d65c 50%,#9ccc65 75%,#34a853)}
+.tl::after{content:"";position:absolute;right:-1.4cqw;top:4.75cqw;border:.95cqw solid transparent;border-left:1.6cqw solid #34a853}
+.tl li{position:relative;display:flex;flex-direction:column}
+.tl li:nth-child(1){--c:#e8665a}.tl li:nth-child(2){--c:#ef9a3c}.tl li:nth-child(3){--c:#d9b020}.tl li:nth-child(4){--c:#7cb342}.tl li:nth-child(5){--c:#2e9b4b}
+.tl-when{font-size:3cqw;font-weight:300;color:var(--c);height:4cqw;line-height:1}
+.tl-dot{width:2cqw;height:2cqw;border-radius:50%;background:#fff;border:.45cqw solid var(--c);margin:.3cqw 0 1.6cqw;position:relative;z-index:1;box-shadow:0 2px 6px rgba(0,0,0,.15)}
+.tl b{font-size:1.6cqw;font-weight:600}
+.tl p{font-size:1.2cqw;padding-right:1cqw;line-height:1.55;color:var(--muted);margin-top:.6cqw}
+.tl-end .tl-when{font-weight:600}
+.tl-end .tl-dot{background:var(--c);box-shadow:0 0 0 .7cqw rgba(52,168,83,.25)}
+.tl-end b,.tl-end p{color:var(--ink)}
+.pcs{flex:1;display:flex;justify-content:center;align-items:stretch;padding-top:2.4cqw;gap:3cqw;margin-bottom:3.4cqw}
+.pc{position:relative;width:27cqw;max-width:100%;min-height:36cqw;background:var(--paper);border:1px solid var(--line);border-radius:1.4cqw;padding:3cqw 2.6cqw;display:flex;flex-direction:column;box-shadow:0 1.2cqw 3cqw rgba(60,40,20,.1)}
+.pc-tag{font-size:.9cqw;font-weight:700;letter-spacing:.25em;color:var(--bronze)}
+.pc h3{font-size:3cqw;font-weight:700;margin:.3cqw 0 1.6cqw;letter-spacing:-.01em}
+.pc-price{font-size:3.6cqw;font-weight:700;line-height:1;display:flex;align-items:baseline;gap:.4cqw}
+.pc-price small{font-size:1.4cqw;font-weight:600;align-self:flex-start;margin-top:.4cqw}
+.pc-price span{font-size:1.1cqw;font-weight:400;color:var(--muted)}
+.pc hr{border:0;border-top:1px solid var(--line);margin:2cqw 0}
+.pc ul{list-style:none;margin:0;padding:0;display:grid;gap:1.8cqw;font-size:1.25cqw}
+.pc li{display:flex;gap:.9cqw;align-items:center}
+.pc li svg{width:1.4cqw;height:1.4cqw;flex:none;color:var(--bronze)}
+.pc-adv{border:2px solid var(--bronze)}
+.pc-badge{position:absolute;top:-1.3cqw;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--ink);font-size:.95cqw;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:.7cqw 1.6cqw;border-radius:2cqw;white-space:nowrap}
+.ang div,.ff,.fb,.box,.cols5>div{border-radius:1.2cqw;overflow:hidden}
+.dots{gap:1cqw;align-items:center}
+.dots button{all:unset;cursor:pointer;padding:.6cqw;display:flex}
+.dots button i{display:block;width:.9cqw;height:.9cqw;min-width:5px;min-height:5px;width:.45cqw;height:.45cqw;border-radius:50%;background:var(--line);opacity:1;transition:transform .2s,background .2s}
+.dots button[aria-current="true"] i{background:var(--bronze);transform:none}
+.dots button:focus-visible{outline:2px solid var(--bronze);outline-offset:2px;border-radius:50%}
+@media (max-width:700px){.s{aspect-ratio:auto;min-height:56cqw}}
+@media (max-width:700px){.carousel{container-type:normal}.ctrack>.slide.s{aspect-ratio:16/9!important;min-height:0!important;height:auto!important}}
+/* v2: textos maiores e slides escuros da marca */
+.eb{font-size:1.05cqw}
+h2{font-size:3.7cqw}
+.sub{font-size:1.5cqw}
+.body{font-size:1.6cqw}.case .body{max-width:42cqw}
+.ft{font-size:.95cqw}
+.num{font-size:1.05cqw}
+.stats b{font-size:2.7cqw}.stats span{font-size:1.05cqw}
+.cap{font-size:1.05cqw}
+.prof div{font-size:1.7cqw}.prof em{font-size:1.25cqw}.prof strong{font-size:2.6cqw}
+.mkt div{font-size:1.5cqw}.src{font-size:1cqw}
+.ang div{font-size:1.4cqw}.ang b{font-size:2cqw}.ang span{font-size:1.05cqw}
+.cols5 ul{font-size:1.6cqw}.cols5 b{font-size:2.3cqw}
+.out div{font-size:1.8cqw}.out span{font-size:1.55cqw}
+.tl-when{font-size:2.9cqw;white-space:nowrap}.tl b{font-size:1.95cqw}.tl p{font-size:1.45cqw}
+.pc{flex:1;width:auto;max-width:38cqw}
+.pc-tag{font-size:1.05cqw}.pc h3{font-size:3.2cqw}.pc-price{font-size:4cqw}.pc-price span{font-size:1.3cqw}
+.pc ul{font-size:1.45cqw;gap:1.4cqw}.pc li svg{width:1.6cqw;height:1.6cqw}
+.ns div{font-size:1.7cqw}
+.nl div{font-size:1.55cqw}
+.ia{font-size:1.6cqw}.ia h3{font-size:3cqw}
+.contact{font-size:1.4cqw}.contact span{font-size:1.05cqw}
+.meta{font-size:1.3cqw}.meta span{font-size:1.05cqw}
+.d .meta{border-color:var(--lineD)}.d .meta span,.d .contact span{color:var(--gold)}
+.d .bars i{background:var(--gold)}
+.d .mkt div{border-color:var(--gold)}.d .src{color:var(--mutedD)}
+.d .sub{color:var(--mutedD)}
+.tl3{grid-template-columns:repeat(3,1fr)}
+.meta-bars div{grid-template-columns:27cqw 1fr 14cqw}.meta-bars b{font-size:2.1cqw}.meta-bars small{font-size:1.5cqw}.meta-bars strong{font-size:2.8cqw}.track{height:3.4cqw}
+.bar span{font-size:1.1cqw}.bar p{font-size:1.5cqw}.bar strong{font-size:4cqw}
+</style>
+
+<div class="deck">
+
+<!-- 01 Capa -->
+<section class="s d">
+  <img class="logo" src="logo.png" alt="Alto Produtora Audiovisual">
+  <div class="bars"><i style="width:4cqw"></i><i style="width:7cqw"></i><i style="width:10cqw"></i><i style="width:13cqw"></i></div>
+  <div class="grow" style="display:flex;flex-direction:column;justify-content:center">
+    <h1 style="font-size:6cqw">Proposta comercial<br><b>Forge Brothers</b></h1>
+  </div>
+  <div class="meta">
+    <div><span>DOCUMENTO</span>Marketing de conteúdo para o lançamento</div>
+    <div><span>CLIENTE</span>Léo Anjos · Forge Brothers</div>
+    <div><span>ANO</span>2026</div>
+    <div><span>INSTAGRAM</span>@altoproducaoaudiovisual</div>
+  </div>
+</section>
+
+<!-- 05 Cases (carrossel) -->
+<section class="carousel" aria-label="Cases">
+  <div class="ctrack" id="track">
+<!-- 04 Perfis -->
+<div class="slide s c">
+  <div class="eb">01 — Portfólio</div><h2>Resultado dos nossos <b>últimos 6 meses de trabalho.</b></h2>
+  <div class="row grow" style="grid-template-columns:1fr 1.6fr;gap:5cqw;align-items:center">
+    <div style="display:flex;flex-direction:column">
+      <div style="padding-top:2cqw;border-top:2px solid var(--bronze);width:fit-content"><div class="big">≈ 101 mil</div><p style="font-size:1cqw;color:var(--mutedD);margin-top:.6cqw">seguidores somados nos seis perfis</p></div>
+    </div>
+    <div class="prof" style="align-self:center">
+      <div>@tchepicanhasbocadorio<em>Restaurante</em><strong>46,9 mil</strong></div>
+      <div>@panoramacoisadecinema<em>Festival de cinema</em><strong>23,8 mil</strong></div>
+      <div>@fabianapratesadvogados<em>Escritório de advocacia</em><strong>18,3 mil</strong></div>
+      <div>@abat_advogados<em>Advocacia trabalhista</em><strong>8.653</strong></div>
+      <div>@fabianapratesoficial<em>Advogada e palestrante</em><strong>2.280</strong></div>
+      <div>@anasalles.alemdamateria<em>Espiritualidade</em><strong>1.325</strong></div>
+    </div>
+  </div>
+</div>
+
+<!-- 05 Tchê -->
+<div class="slide s c">
+  <div class="case">
+    <div>
+      <div class="eb">Case 01 · Gastronomia</div><h2>Grupo <b>Tchê Picanhas</b></h2>
+      <p class="body">Reposicionamos uma <b>tradição gastronômica de mais de trinta anos</b> para as dinâmicas atuais de consumo digital, transformando o tempo de mercado em um ativo narrativo de valor, e não em um sinal de envelhecimento.</p>
+      <div class="stats" style="margin-top:auto;margin-bottom:3.4cqw"><div><b>30+</b><span>Anos de tradição</span></div><div><b>46,9 mil</b><span>Seguidores hoje</span></div></div>
+    </div>
+    <div style="justify-content:center;padding-bottom:3cqw">
+      <img src="tche.jpg" alt="Feed do Instagram antes e depois" style="mix-blend-mode:multiply">
+      <div style="display:grid;grid-template-columns:1fr 1fr;margin-top:1cqw"><span class="cap">Antes</span><span class="cap">Depois</span></div>
+    </div>
+  </div>
+  </div>
+
+<!-- 06 Panorama -->
+<div class="slide s c">
+  <div class="case">
+    <div>
+      <div class="eb">Case 02 · Cultura</div><h2>Festival <b>Panorama<br>Coisa de Cinema</b></h2>
+      <p class="body">Coordenamos o marketing da expansão territorial do evento, de Salvador para o Rio de Janeiro. O desafio de adaptar a linguagem para um público novo sem diluir a essência do festival resultou em uma <b>entrada bem-sucedida em um novo território.</b></p>
+      <div class="stats" style="margin-top:auto;margin-bottom:3.4cqw"><div><b>SSA → RJ</b><span>Expansão</span></div><div><b>23,8 mil</b><span>Seguidores hoje</span></div></div>
+    </div>
+    <div style="justify-content:center;padding-bottom:3cqw">
+      <img src="panorama.jpg" alt="Peças Conexão Rio-Bahia e O Panorama fez as malas">
+      <div style="display:grid;grid-template-columns:1fr 1fr;margin-top:1.4cqw"><span class="cap">Conexão Rio · Bahia</span><span class="cap">O Panorama fez as malas</span></div>
+    </div>
+  </div>
+  </div>
+
+<!-- 07 Fabiana -->
+<div class="slide s c">
+  <div class="case">
+    <div>
+      <div class="eb">Case 03 · Advocacia</div><h2>Fabiana Prates <b>Advogados</b></h2>
+      <p class="body">Assumimos uma conta estagnada e reconstruímos a base com uma <b>estratégia de conteúdo focada em autoridade jurídica e adequação de linguagem.</b></p>
+      <div class="box" style="margin-top:auto;margin-bottom:3.4cqw"><span>SEGUIDORES</span><b>3 mil → <strong>18,3 mil</strong></b><p style="font-size:1.3cqw;font-weight:500">Média de 1.500 novas contas por mês</p></div>
+    </div>
+    <div style="align-items:center;padding-bottom:3.4cqw">
+      <img src="fabiana.jpg" alt="Feed @fabianapratesadvogados" style="height:100%;object-fit:contain">
+    </div>
+  </div>
+  </div>
+
+<!-- 08 ABAT -->
+<div class="slide s c">
+  <div class="case">
+    <div>
+      <div class="eb">Case 04 · Institucional</div><h2>Associação Baiana da<br><b>Advocacia Trabalhista</b></h2>
+      <p class="body">Marketing corporativo alinhado às <b>pautas relevantes no contexto da associação</b> e à divulgação das ações promovidas pela instituição, em <b>contato direto com a comunidade trabalhista.</b></p>
+      <div class="stats" style="margin-top:auto;margin-bottom:3.4cqw"><div><b>50 anos</b><span>De associação</span></div><div><b>8.653</b><span>Seguidores hoje</span></div></div>
+    </div>
+    <div style="align-items:center;padding-bottom:3.4cqw">
+      <img src="abat.jpg" alt="Feed @abat_advogados" style="height:100%;object-fit:contain">
+    </div>
+  </div>
+  </div>
+
+  </div>
+  <div class="cnav">
+    <button type="button" id="prev" aria-label="Case anterior">‹</button>
+    <div class="dots" id="dots"></div>
+    <button type="button" id="next" aria-label="Próximo case">›</button>
+  </div>
+</section>
+
+<!-- 11 Mercado -->
+<section class="s d">
+  <div class="eb">02 — O mercado</div><h2>Benchmark <b>inicial</b><span style="font-size:.45em;font-weight:600;color:var(--gold);margin-left:.8em;vertical-align:middle;letter-spacing:.04em">· Nicho Indie Games</span></h2>
+  <p class="sub">A Steam ficou mais exigente com indies. O caminho que sobra é gerar volume próprio de interesse.</p>
+  <div class="mkt">
+    <div><b style="color:var(--orange)">20%</b>das wishlists viram compra na primeira semana. É a mediana na Steam.</div>
+    <div><b>~100 mil</b>wishlists estimadas para entrar na lista Popular Upcoming depois da mudança de junho de 2026. Antes, cerca de 7 mil bastavam.</div>
+    <div><b>8–30 mil</b>wishlists estimadas para aparecer nos calendários personalizados da Steam, que hoje levam mais tráfego a indies.</div>
+    <div><b>61.749</b>wishlists que o indie Mortal Rite acumulou a partir de 126 milhões de visualizações orgânicas no TikTok.</div>
+  </div>
+  <p class="src">Fontes: GameDiscoverCo, “Steam: the new wishlists to first week sales expectations” · GamesRadar+, 1 jul. 2026 · Game Developer, 22 ago. 2022 (caso Mortal Rite).</p>
+  <div class="ft"><span>Alto · Produtora Audiovisual</span><span>Portfólio e proposta · 03 / 15</span></div>
+</section>
+
+<!-- 12b Funil curto -->
+<section class="s c">
+  <div class="eb">03 — A estratégia</div><h2><b>O funil</b></h2>
+  <p class="sub">Todo o conteúdo tem um destino só.</p>
+  <div style="flex:1;min-height:0;display:flex;justify-content:center;padding:1cqw 6cqw 4cqw 10cqw"><svg viewBox="0 0 800 400" style="width:100%;height:100%;overflow:visible" font-family="Montserrat,sans-serif" role="img" aria-label="Instagram, YouTube e TikTok enviando público para a página da Steam"><defs><linearGradient id="igg" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#feda75"/><stop offset=".3" stop-color="#fa7e1e"/><stop offset=".6" stop-color="#d62976"/><stop offset="1" stop-color="#4f5bd5"/></linearGradient><linearGradient id="stg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a475e"/><stop offset="1" stop-color="#171a21"/></linearGradient></defs><path id="fp0" d="M175 70 C 420 70, 470 205, 640 205" fill="none" stroke="#b9946a" stroke-width="1.5" stroke-dasharray="2 8" opacity=".55"/><path id="fp1" d="M175 205 L 640 205" fill="none" stroke="#b9946a" stroke-width="1.5" stroke-dasharray="2 8" opacity=".55"/><path id="fp2" d="M175 340 C 420 340, 470 205, 640 205" fill="none" stroke="#b9946a" stroke-width="1.5" stroke-dasharray="2 8" opacity=".55"/><circle r="5" fill="#7d5d3c"><animateMotion dur="2.4s" begin="0.0s" repeatCount="indefinite"><mpath href="#fp0"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" dur="2.4s" begin="0.0s" repeatCount="indefinite"/></circle><circle r="5" fill="#7d5d3c"><animateMotion dur="2.4s" begin="1.2s" repeatCount="indefinite"><mpath href="#fp0"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" dur="2.4s" begin="1.2s" repeatCount="indefinite"/></circle><circle r="5" fill="#7d5d3c"><animateMotion dur="2.4s" begin="0.6s" repeatCount="indefinite"><mpath href="#fp1"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" dur="2.4s" begin="0.6s" repeatCount="indefinite"/></circle><circle r="5" fill="#7d5d3c"><animateMotion dur="2.4s" begin="1.7999999999999998s" repeatCount="indefinite"><mpath href="#fp1"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" dur="2.4s" begin="1.7999999999999998s" repeatCount="indefinite"/></circle><circle r="5" fill="#7d5d3c"><animateMotion dur="2.4s" begin="1.2s" repeatCount="indefinite"><mpath href="#fp2"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" dur="2.4s" begin="1.2s" repeatCount="indefinite"/></circle><circle r="5" fill="#7d5d3c"><animateMotion dur="2.4s" begin="2.4s" repeatCount="indefinite"><mpath href="#fp2"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" dur="2.4s" begin="2.4s" repeatCount="indefinite"/></circle><g class="sway" style="animation-delay:0s"><rect x="95" y="32" width="76" height="76" rx="18" fill="url(#igg)"/><g transform="translate(133 70)" fill="none" stroke="#f2eee8" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><rect x="-17" y="-17" width="34" height="34" rx="10"/><circle r="8"/><circle cx="10" cy="-10" r="1.5" fill="#f2eee8"/></g><text x="80" y="76" text-anchor="end" font-size="17" font-weight="600" fill="#1c1c1c">Instagram</text></g><g class="sway" style="animation-delay:0.8s"><rect x="95" y="167" width="76" height="76" rx="18" fill="#ff0033"/><g transform="translate(133 205)"><rect x="-11" y="-17" width="22" height="34" rx="10" fill="#f2eee8"/><path d="M-4 -7 L7 0 L-4 7 Z" fill="#ff0033"/></g><text x="80" y="211" text-anchor="end" font-size="17" font-weight="600" fill="#1c1c1c">YouTube</text></g><g class="sway" style="animation-delay:1.2s"><rect x="95" y="302" width="76" height="76" rx="18" fill="#010101"/><g transform="translate(133 340)" fill="none" stroke="#f2eee8" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 -17 V7 a8 8 0 1 1 -8 -8 M2 -17 c2 7 7 10 13 10" transform="translate(-2 -2)" stroke="#25f4ee"/><path d="M2 -17 V7 a8 8 0 1 1 -8 -8 M2 -17 c2 7 7 10 13 10" transform="translate(2 2)" stroke="#fe2c55"/><path d="M2 -17 V7 a8 8 0 1 1 -8 -8 M2 -17 c2 7 7 10 13 10"/></g><text x="80" y="346" text-anchor="end" font-size="17" font-weight="600" fill="#1c1c1c">TikTok</text></g><g class="steam"><circle cx="700" cy="205" r="62" fill="url(#stg)"/><g fill="none" stroke="#f2eee8" stroke-width="4" stroke-linecap="round"><circle cx="718" cy="190" r="15"/><circle cx="718" cy="190" r="6" fill="#f2eee8"/><path d="M704 200 L676 214"/><circle cx="672" cy="218" r="10"/></g></g><text x="700" y="300" text-anchor="middle" font-size="22" font-weight="700" fill="#1c1c1c">Steam</text><text x="700" y="325" text-anchor="middle" font-size="15" fill="#6d655c">Wishlist e compra</text></svg></div>
+  <div class="ft"><span>Alto · Produtora Audiovisual</span><span>Portfólio e proposta · 04 / 15</span></div>
+</section>
+
+<!-- 13 Ângulos -->
+<section class="s c">
+  <div class="eb">03 — A estratégia</div><h2>A <b>Estratégia</b></h2>
+  <p style="font-size:1.7cqw;font-weight:500;color:var(--gold);margin-top:.8cqw">Toda a estratégia é baseada nos conceitos de diversificação de ângulos e formatos.</p>
+  <p class="sub" style="max-width:84cqw;line-height:1.5;margin-top:1cqw">Os algoritmos das redes, como o da Meta, valorizam a diversificação criativa: cada tema novo e cada forma nova de apresentar o jogo chegam a uma fatia diferente de público. Por isso, em vez de repetir o mesmo vídeo, variamos os <b>ângulos</b> (o tema de cada conteúdo) e os <b>formatos</b> (a forma de apresentar). Mais combinações significam mais públicos alcançados e mais dados sobre o que funciona.</p>
+  <p style="font-size:2cqw;font-weight:700;color:var(--bronze);margin-top:1.2cqw">Exemplos:</p>
+  <div class="ang" style="margin-top:.6cqw">
+    <div><i>01</i><b>Gameplay</b><span>O QUE É</span>Recortes das partidas mais caóticas e engraçadas.<span>POR QUE FUNCIONA</span><em>Mostra a dinâmica do jogo sem tentar vender ou explicar demais.</em></div>
+    <div><i>02</i><b>Bastidores</b><span>O QUE É</span>O Léo e a equipe contando por que cada feature existe, modelagem 3D e rotina de desenvolvimento.<span>POR QUE FUNCIONA</span><em>Cria vínculo com quem faz o jogo.</em></div>
+    <div><i>03</i><b>Callouts</b><span>O QUE É</span>Ganchos com referências que o público já conhece: gêneros, jogos e memes do momento.<span>POR QUE FUNCIONA</span><em>Prende a atenção nos primeiros segundos.</em></div>
+    <div><i>04</i><b>Criadores</b><span>O QUE É</span>Clipes de criadores de conteúdo jogando o Forge Brothers.<span>POR QUE FUNCIONA</span><em>Prova social e alcance em novas bolhas.</em></div>
+  </div>
+  <div class="ft"><span>Alto · Produtora Audiovisual</span><span>Portfólio e proposta · 05 / 15</span></div>
+</section>
+
+<!-- 14b Cases estratégia -->
+<section class="s c">
+  <div class="eb">03 — A estratégia</div><h2>Quem já <b>escalou assim</b></h2>
+  <p class="sub">Três casos que usaram diversificação criativa e volume de conteúdo para crescer. Clique em cada capa.</p>
+  <div class="flips">
+    <button type="button" class="flip" aria-label="Ver o caso Tiny Glade">
+      <span class="fi">
+        <span class="ff" style="background-image:url(c2198150.jpg)"><span class="fcta"><b>Tiny Glade</b>Clique para ver o caso ↻</span></span>
+        <span class="fb"><span class="num">JOGO INDIE · PC</span><b class="fn">Tiny Glade</b><span class="fl">Jogo de construção feito por 2 desenvolvedores, que chegou ao lançamento só com conteúdo orgânico.</span><ul><li>Vídeos curtos testando formas diferentes de apresentar o jogo</li><li>Os ângulos que engajaram definiram a comunicação da página da Steam</li><li>Criadores e jogadores espalharam o jogo sem verba de anúncio</li></ul><span class="fr"><b>+1 milhão de wishlists</b>Sem mídia paga (OP Game Marketing)</span></span>
+      </span>
+    </button>
+    <button type="button" class="flip" aria-label="Ver o caso Cal AI">
+      <span class="fi">
+        <span class="ff" style="background-image:url(calai.jpg)"><span class="fcta"><b>Cal AI</b>Clique para ver o caso ↻</span></span>
+        <span class="fb"><span class="num">APP · SAÚDE</span><b class="fn">Cal AI</b><span class="fl">App de contagem de calorias que cresceu com volume de conteúdo e diversificação criativa antes de investir em mídia paga.</span><ul><li>Várias contas no TikTok ao mesmo tempo, cada uma com um rosto e um formato</li><li>Centenas de criadores produzindo vídeos todo mês</li><li>Os criativos que funcionaram no orgânico viraram anúncios para escalar</li></ul><span class="fr"><b>~US$ 50 mi/ano</b>Receita reportada na venda para a MyFitnessPal, dez/2025</span></span>
+      </span>
+    </button>
+    <button type="button" class="flip" aria-label="Ver o caso Mortal Rite">
+      <span class="fi">
+        <span class="ff" style="background-image:url(c1655990.jpg)"><span class="fcta"><b>Mortal Rite</b>Clique para ver o caso ↻</span></span>
+        <span class="fb"><span class="num">JOGO INDIE · PC</span><b class="fn">Mortal Rite</b><span class="fl">Jogo indie que construiu a base de wishlists com vídeos curtos orgânicos no TikTok.</span><ul><li>Vídeos curtos de gameplay no TikTok</li><li>126 milhões de visualizações orgânicas</li><li>Público levado direto para a página da Steam</li></ul><span class="fr"><b>61.749 wishlists</b>Game Developer, ago/2022</span></span>
+      </span>
+    </button>
+  </div>
+  <div class="ft"><span>Alto · Produtora Audiovisual</span><span>Portfólio e proposta · 06 / 15</span></div>
+</section>
+
+<!-- 15 Entrega -->
+<section class="s c">
+  <div class="eb">04 — Escopo de atuação</div><h2>O que a Alto <b>entrega</b></h2>
+  <div class="cols5" style="grid-template-columns:repeat(3,1fr)">
+    <div><span class="num">01</span><b>Estratégia orgânica</b><ul><li>Página da Steam com foco em conversão de wishlists</li><li>Estratégia de testes de formato e ângulos</li><li>Leitura semanal de desempenho</li></ul></div>
+    <div><span class="num">02</span><b>Produção criativa</b><ul><li>Clipes de gameplay para TikTok, Shorts e Reels, a depender do plano</li><li>Criação, organização e controle das redes sociais do projeto</li></ul></div>
+    <div><span class="num">03</span><b>Idiomas</b><ul><li>Português (PT-BR) e inglês desde o início</li><li>Cada idioma tem a sua conta, então o projeto precisa de um segundo perfil</li></ul></div>
+  </div>
+  <div class="ft"><span>Alto · Produtora Audiovisual</span><span>Portfólio e proposta · 07 / 15</span></div>
+</section>
+
+<!-- 16 Fora -->
+<section class="s c">
+  <div class="eb">04 — Escopo de atuação</div><h2>O que fica <b>fora do escopo</b></h2>
+  <div class="out">
+    <div><b>Tráfego pago e anúncios</b><span>Em jogos indie de PC, raramente converte.</span></div>
+    <div><b>Gestão de comunidades (Discord)</b><span>Fica com a equipe do jogo. A Alto usa as comunidades como canal e pauta.</span></div>
+    <div><b>Marketing institucional e LinkedIn</b><span>Fora do foco do lançamento.</span></div>
+    <div><b>Representação presencial em eventos</b><span>A equipe do jogo segue à frente dos eventos.</span></div>
+    <div><b>Imagens do jogo geradas por IA</b><span>Decisão do cliente: nenhuma imagem do jogo é gerada com inteligência artificial.</span></div>
+  </div>
+  <div class="ft"><span>Alto · Produtora Audiovisual</span><span>Portfólio e proposta · 08 / 15</span></div>
+</section>
+
+<!-- 17 Cronograma -->
+<section class="s c">
+  <div class="eb">05 — Cronograma</div><h2>15 a 20 dias até começar a <b>produção</b></h2>
+  <p class="sub">Uma semana para pesquisa e esboço da página, outra para produção e aprovação. Do dia 15 ao 20, a produção entra em ritmo normal.</p>
+  <ol class="tl tl3" style="padding-bottom:4cqw"><li class=""><span class="tl-when">Dia 1–7</span><span class="tl-dot"></span><b>Pesquisa e setup</b><p>Pesquisa, setup e onboarding geral: estudo do jogo, acessos e as duas contas, PT-BR e inglês. Esboço da página de wishlist da Steam no fim da semana.</p></li><li class=""><span class="tl-when">Dia 8–14</span><span class="tl-dot"></span><b>Aprovação</b><p>Produção da página da Steam e dos primeiros conteúdos, e aprovação do cronograma e da estratégia.</p></li><li class="tl-end"><span class="tl-when">Dia 15–20</span><span class="tl-dot"></span><b>Começa a produção</b><p>A produção entra em ritmo normal e segue as etapas do próximo slide até o lançamento.</p></li></ol>
+  <div class="ft"><span>Alto · Produtora Audiovisual</span><span>Portfólio e proposta · 09 / 15</span></div>
+</section>
+
+<!-- 17b Cronograma depois do dia 15 -->
+<section class="s c">
+  <div class="eb">05 — Cronograma</div><h2>Do dia 15 ao <b>lançamento</b></h2>
+  <p class="sub">Contado a partir do início da produção. Nada vai ao ar antes de a página da Steam existir, para o público ter onde cair.</p>
+  <ol class="tl" style="padding-bottom:4cqw"><li class=""><span class="tl-when">Mês 1</span><span class="tl-dot"></span><b>Gaveta de conteúdo</b><p>Primeiros conteúdos produzidos e postados nas redes sociais definidas, com a página da Steam no ar.</p></li><li class=""><span class="tl-when">Mês 2</span><span class="tl-dot"></span><b>Primeiros resultados</b><p>Primeiro breakdown realizado e produção da nova leva de criativos a partir dos resultados do primeiro mês.</p></li><li class=""><span class="tl-when">Mês 3+</span><span class="tl-dot"></span><b>Escala</b><p>Mais volume nos ângulos que funcionam e primeiros criadores, rumo a 5.000 wishlists.</p></li><li class=""><span class="tl-when">Demo</span><span class="tl-dot"></span><b>Lançamento da demo</b><p>Pico de conteúdo e criadores jogando a demo.</p></li><li class="tl-end"><span class="tl-when">14 dias</span><span class="tl-dot"></span><b>Reta final</b><p>Contagem regressiva com criadores, imprensa e comunidades até o lançamento, em abril de 2027.</p></li></ol>
+  <div class="ft"><span>Alto · Produtora Audiovisual</span><span>Portfólio e proposta · 10 / 17</span></div>
+</section>
+
+<!-- 18 Metas -->
+<section class="s c">
+  <div class="eb">06 — Metas e projeções</div><h2>Wishlists para <b>bater a meta</b></h2>
+  <p class="sub">Com base na conversão de referência de ~20% entre wishlist e compra na primeira semana.</p>
+  <div class="meta-bars">
+    <div><span><b>Marco pré-demo</b><small>Meta de referência</small></span><span class="track" style="display:block"><i style="width:3.3%"></i></span><strong>5.000</strong></div>
+    <div><span><b>Break-even</b><small>12.000 cópias</small></span><span class="track" style="display:block"><i style="width:40%"></i></span><strong>~60.000</strong></div>
+    <div><span><b>Meta do cliente</b><small>15 a 30 mil cópias</small></span><span class="track" style="display:block"><i style="width:100%;background:linear-gradient(90deg,var(--bronze) 0 50%,var(--gold) 50% 100%)"></i></span><strong style="white-space:nowrap">75–150 mil</strong></div>
+  </div>
+  <p style="font-size:1.05cqw;color:var(--muted);margin-top:1.4cqw">Valores em wishlists, exceto onde indicado. Meta do cliente em cópias vendidas no lançamento, convertida em wishlists a ~20%.</p>
+  <div class="bar"><div><span>META DO CLIENTE NO LANÇAMENTO</span><p>O conteúdo começa cedo e mantém volume até abril para chegar lá.</p></div><strong>15 a 30 mil cópias</strong></div>
+  <div class="ft"><span>Alto · Produtora Audiovisual</span><span>Portfólio e proposta · 11 / 17</span></div>
+</section>
+
+<!-- 19 Investimento -->
+<section class="s c">
+  <div class="eb">07 — Investimento</div><h2><b>Planos</b></h2>
+  <div class="pcs"><div class="pc "><span class="pc-tag">PLANO</span><h3>Standard</h3><div class="pc-price"><small>R$</small>4.500<span>/mês</span></div><hr><ul><li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Página da Steam com foco em conversão de wishlists</li><li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Estratégia de testes de formato e ângulos</li><li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><b>De 12 a 17 vídeos por mês</b></li><li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Canal: Instagram</li><li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Criação, organização e controle das redes sociais</li><li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Português (PT-BR) e inglês, cada idioma em uma conta própria</li><li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Leitura semanal de desempenho</li></ul></div><div class="pc pc-adv"><span class="pc-badge">Recomendado</span><span class="pc-tag">PLANO</span><h3>Advanced</h3><div class="pc-price"><small>R$</small>6.800<span>/mês</span></div><hr><ul><li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><b>Tudo do plano Standard</b></li><li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><b>De 20 a 28 vídeos por mês</b></li><li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Canais: Instagram, YouTube e TikTok</li><li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Mapeamento de criadores e veículos</li><li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Apoio na abordagem e negociação com criadores</li><li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Contato com a imprensa especializada</li><li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Busca e indicação de ilustrador no estilo do jogo para a arte da página da Steam</li></ul></div></div>
+  <div class="ft"><span>Alto · Produtora Audiovisual</span><span>Portfólio e proposta · 10 / 15</span></div>
+</section>
+
+<!-- 19b Plano Performance -->
+<section class="s c">
+  <div class="eb">07 — Investimento</div><h2>Plano <b>Performance</b></h2>
+  <div class="row" style="grid-template-columns:1fr 1.2fr;gap:3cqw;margin-top:2cqw;align-items:start">
+    <div class="pc" style="max-width:none;min-height:0;padding:2.4cqw 2.4cqw"><span class="pc-tag">PLANO</span><h3 style="margin-bottom:1cqw">Performance</h3><div class="pc-price"><small>R$</small>5.400<span>/mês + 5%</span></div><hr style="margin:1.4cqw 0"><ul><li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><b>Tudo do plano Advanced</b></li><li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Acesso aos relatórios de vendas da Steam</li><li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Links de rastreio para medir a origem das wishlists</li></ul></div>
+    <div class="nl">
+      <div><i>01</i><span>O fixo é R$ 1.400 menor que o do Advanced, com o mesmo escopo.</span></div>
+      <div><i>02</i><span>A parte variável só existe depois que o jogo passar do break-even, estimado em 12.000 cópias.</span></div>
+      <div><i>03</i><span>A Alto recebe 5% da receita líquida (impostos e taxa da Steam já descontados) das cópias acima dessa marca, nos primeiros 90 dias de venda.</span></div>
+    </div>
+  </div>
+  <div class="bar"><div><span>EXEMPLO ILUSTRATIVO</span><p>20.000 cópias a R$ 30 líquidos: as 8.000 acima do break-even somam R$ 240.000, e 5% disso é a comissão.</p></div><strong>R$ 12.000</strong></div>
+  <div class="ft"><span>Alto · Produtora Audiovisual</span><span>Portfólio e proposta · 13 / 18</span></div>
+</section>
+
+<!-- 14b Como testamos -->
+<section class="s c">
+  <div class="eb">07 — Investimento</div><h2>Breakdown do <b>ciclo de testes</b></h2>
+  <p class="sub">É por isso que o número de vídeos é uma faixa: para o volume acompanhar o resultado.</p>
+  <div class="row" style="grid-template-columns:1.35fr 1fr;gap:3cqw;margin-top:2.2cqw;align-items:start">
+    <div class="nl">
+      <div><i>01</i><span>Definimos os <b>ângulos</b> (a abordagem de cada conteúdo) e os <b>formatos</b> (o estilo de cada vídeo) e passamos essa estratégia para você.</span></div>
+      <div><i>02</i><span>Rodamos os testes com uma meta de visualização e engajamento combinada com você.</span></div>
+      <div><i>03</i><span>A avaliação é semanal. Se a meta não vier, insistimos mais uma semana. Passadas duas semanas sem resultado, trocamos o formato ou o ângulo.</span></div>
+      <div><i>04</i><span>Quando um teste funciona, aumentamos o volume do que está dando certo.</span></div>
+    </div>
+    <div class="ia"><span style="font-size:1.05cqw;font-weight:700;letter-spacing:.2em">NA PRÁTICA</span><h3>Mais resultado, mais vídeos</h3><p>O valor do plano é fixo. Por isso o número de vídeos é uma faixa: quando um formato funciona, produzimos mais dele, sem custo adicional.</p></div>
+  </div>
+  <div class="ft"><span>Alto · Produtora Audiovisual</span><span>Portfólio e proposta · 11 / 15</span></div>
+</section>
+
+<!-- 14 14 dias -->
+<section class="s d">
+  <div class="eb">07 — Investimento</div><h2>Os 14 dias que <b>decidem</b></h2>
+  <p class="sub">Nas duas semanas antes do lançamento, todo o interesse acumulado precisa aparecer de uma vez.</p>
+  <div class="row" style="grid-template-columns:1.15fr .85fr;gap:3cqw;margin-top:1.6cqw;align-items:center">
+    <div class="nl">
+      <div><i>01</i>Conteúdo de contagem regressiva já produzido e aprovado.</div>
+      <div><i>02</i>Calendário de criadores e imprensa fechado com antecedência.</div>
+      <div><i>03</i>Comunidades do Discord mobilizadas para o dia do lançamento.</div>
+      
+    </div>
+    <img src="forge.jpg" alt="Forge Brothers" style="width:100%;height:17cqw;min-height:0;object-fit:cover;object-position:35% center;border-radius:1.4cqw;box-shadow:0 1.4cqw 3cqw rgba(0,0,0,.18)">
+  </div>
+  <div style="margin-top:2cqw;border-top:2px solid var(--gold);padding-top:1.4cqw"><p style="font-size:1.7cqw;font-weight:600;margin-bottom:1.2cqw">Reta final: 1 vídeo por dia, equipe dedicada e sem limite mensal de vídeos</p><div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2cqw"><div style="background:var(--ink2);border-top:3px solid var(--gold);border-radius:1cqw;padding:1cqw 1.6cqw"><span style="font-size:1.3cqw;letter-spacing:.12em;color:var(--gold);font-weight:700">STANDARD</span><div style="font-size:3.2cqw;font-weight:700">+ R$ 500</div></div><div style="background:var(--ink2);border-top:3px solid var(--gold);border-radius:1cqw;padding:1cqw 1.6cqw"><span style="font-size:1.3cqw;letter-spacing:.12em;color:var(--gold);font-weight:700">ADVANCED</span><div style="font-size:3.2cqw;font-weight:700">+ R$ 300</div></div><div style="background:var(--ink2);border-top:3px solid var(--gold);border-radius:1cqw;padding:1cqw 1.6cqw"><span style="font-size:1.3cqw;letter-spacing:.12em;color:var(--gold);font-weight:700">PERFORMANCE</span><div style="font-size:3.2cqw;font-weight:700">+ R$ 300</div></div></div></div>
+  <div class="ft"><span>Alto · Produtora Audiovisual</span><span>Portfólio e proposta · 12 / 15</span></div>
+</section>
+
+<!-- 20 Condições -->
+<section class="s c">
+  <div class="eb">07 — Investimento</div><h2><b>Condições</b></h2>
+  <div class="cond" style="grid-template-columns:1fr">
+    <div class="out">
+      <div><b>Duração</b><span>Cinco meses, de dezembro de 2026 a abril de 2027, com renovação opcional para o pós-lançamento.</span></div>
+      <div><b>Pagamento</b><span>Mensal, com vencimento no dia 10. O primeiro pagamento confirma a reserva da equipe.</span></div>
+      <div><b>Flexibilidade</b><span>O plano pode subir de nível em qualquer mês, por exemplo na demo ou na reta final.</span></div>
+      <div><b>Criadores</b><span>Cachês de criadores, quando houver, são pagos à parte e aprovados caso a caso.</span></div>
+      <div><b>Reta final</b><span>Acréscimo único pelos 14 dias de publicação diária: R$ 500 no Standard ou R$ 300 no Advanced e no Performance.</span></div>
+      
+    </div>
+  </div>
+  <div class="ft"><span>Alto · Produtora Audiovisual</span><span>Portfólio e proposta · 13 / 15</span></div>
+</section>
+
+<!-- 21 Próximos passos -->
+<section class="s c">
+  <div class="eb">08 — Próximos passos</div><h2>Próximos <b>passos</b></h2>
+  <div class="ns">
+    <div><i>01</i>Escolha do plano e assinatura do contrato.</div>
+    <div><i>04</i>Criação da segunda conta, para os dois idiomas (PT-BR e inglês).</div>
+    <div><i>02</i>Envio do build e do tutorial de teclas e comandos.</div>
+    <div><i>05</i>Início dos 7 primeiros dias de pesquisa, setup e onboarding.</div>
+    <div><i>03</i>Acesso ao GDD, à bíblia de arte e à documentação no Level Grid.</div>
+  </div>
+  <div class="ft"><span>Alto · Produtora Audiovisual</span><span>Portfólio e proposta · 14 / 15</span></div>
+</section>
+
+<!-- 22 Encerramento -->
+<section class="s d">
+  <img class="logo" src="logo.png" alt="Alto Produtora Audiovisual" style="width:14cqw">
+  <div class="bars"><i style="width:4cqw"></i><i style="width:7cqw"></i><i style="width:10cqw"></i><i style="width:13cqw"></i></div>
+  <div class="row grow" style="grid-template-columns:1fr 1fr;align-items:center">
+    <h1 style="font-size:6cqw">Adiante além<br><b>ALTO.</b></h1>
+    <div style="border-top:2px solid var(--gold);padding-top:1.6cqw"><span style="font-size:.85cqw;font-weight:700;letter-spacing:.2em;color:var(--gold)">PRÓXIMO PASSO</span><p style="font-size:1.25cqw;margin-top:.8cqw">Escolha do plano e início do onboarding.</p></div>
+  </div>
+  <div class="contact"><div><span>E-MAIL</span>marketing@altocriativo.com</div><div><span>TELEFONE</span>(73) 9 9103-4337</div><div><span>INSTAGRAM</span>@altoproducaoaudiovisual</div></div>
+</section>
+
+
+
+</div>
+<script>
+(()=>{const t=document.getElementById('track'),s=[...t.children],d=document.getElementById('dots');
+const go=i=>t.scrollTo({left:t.clientWidth*Math.max(0,Math.min(s.length-1,i)),behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
+const cur=()=>Math.round(t.scrollLeft/t.clientWidth);
+s.forEach((_,i)=>{const b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Case '+(i+1));b.innerHTML='<i></i>';b.onclick=()=>go(i);d.appendChild(b)});
+const upd=()=>[...d.children].forEach((b,i)=>b.setAttribute('aria-current',i===cur()));
+t.addEventListener('scroll',()=>requestAnimationFrame(upd));upd();
+document.getElementById('prev').onclick=()=>go(cur()-1);document.getElementById('next').onclick=()=>go(cur()+1);
+})();
+</script>
+<script>(()=>{const S=[...document.querySelectorAll('.deck>section')];S.forEach((e,i)=>{const f=e.querySelector(':scope>.ft span:last-child');if(f)f.textContent='Portfólio e proposta · '+String(i+1).padStart(2,'0')+' / '+S.length})})()</script>
+<script>document.querySelectorAll(".flip").forEach(b=>b.addEventListener("click",()=>{b.classList.toggle("on");b.setAttribute("aria-pressed",b.classList.contains("on"))}))</script>
+
+</body></html>
